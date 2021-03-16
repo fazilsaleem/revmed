@@ -1,0 +1,27 @@
+<div class="section-notifications" id="notifications">
+    {% for message in messages %}
+        {% if forloop.last %}
+            {% if message.tags == 'success' %}
+                <div class="alert alert-success">
+                    <div class="container-fluid">
+                        {{ message }}
+                    </div>
+                </div>
+            {% elif message.tags == 'error' %}
+                <div class="alert alert-danger">
+                    <div class="container-fluid">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}    
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(2000, 0).slideUp(1000, function(){
+            $(this).remove();
+        });
+    }, 2000);
+</script> 
+

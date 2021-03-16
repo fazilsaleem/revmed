@@ -1,0 +1,14 @@
+Users:
+    Staff, Will have roles
+    Clinic Users/ Patients, Will have roles
+    Super Admin
+
+
+User
+User Profiles
+User roles
+Organization/Practice
+
+
+
+

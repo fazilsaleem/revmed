@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revmed</title>
+    {% include "common/styles.html" %}
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Loader -->
+    <div class="page-wrapper chiller-theme toggled">
+      {% include 'common/sidebar.html' %}
+      <main class="page-content bg-light">
+        {% include 'common/header.html' %} {% block content %}{% endblock content %} 
+        {% include 'common/footer.html' %}
+      </main>
+    </div>
+    {% include "common/scripts.html" %}
+  </body>
+</html>
